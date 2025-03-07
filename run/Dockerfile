@@ -6,10 +6,10 @@ WORKDIR /
 
 ### INSTALLATIONS:
 # Clone SSVGAR (original name for SVelfie) Github repo
-RUN git clone -b v14 https://ssvgar-dummy-user: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@github.com/getzlab/SSVGAR.git
+RUN git clone https://ssvgar-dummy-user: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@github.com/getzlab/SVelfie.git
 # Install requirements.txt for this version of SSVGAR
 RUN python -m pip install --upgrade pip && \
-    pip install --no-cache-dir -r SSVGAR/run_v14/requirements.txt
+    pip install --no-cache-dir -r SVelfie/run/requirements.txt
 # Install bedtools 2.27.1
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg && \
     chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg && \
@@ -25,4 +25,4 @@ ENV PATH="/bedtools2/bin:$PATH"
 RUN apt install -y vim && apt install -y emacs
 
 # Set the working directory
-WORKDIR /SSVGAR
+WORKDIR /SVelfie
