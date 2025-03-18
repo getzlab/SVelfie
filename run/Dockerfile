@@ -6,7 +6,7 @@ WORKDIR /
 
 ### INSTALLATIONS:
 # Clone SSVGAR (original name for SVelfie) Github repo
-RUN git clone https://ssvgar-dummy-user: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@github.com/getzlab/SVelfie.git
+RUN git clone -b v0.0.0 https://ssvgar-dummy-user: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@github.com/getzlab/SVelfie.git
 # Install requirements.txt for this version of SSVGAR
 RUN python -m pip install --upgrade pip && \
     pip install --no-cache-dir -r SVelfie/run/requirements.txt
